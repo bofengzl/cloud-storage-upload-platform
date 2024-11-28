@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
-import { uploadFile, getOssConfig } from './actions'
+import { uploadFile } from './actions'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from "@/components/ui/button"
@@ -28,13 +28,9 @@ export default function Home() {
   const [uploadHistory, setUploadHistory] = useState<UploadRecord[]>([])
   const fileInputRef = useRef<HTMLInputElement>(null)
 
-  const initSetHasConfig = async () => {
-    const savedConfig = await getOssConfig()
-    setHasConfig(!!savedConfig)
-  }
-
   useEffect(() => {
-    initSetHasConfig()
+    const savedConfig = localStorage.getItem('ossConfig')
+    setHasConfig(!!savedConfig)
     loadUploadHistory()
   }, [])
 
@@ -128,14 +124,14 @@ export default function Home() {
               {message}
             </p>
           )}
-          {uploadedUrl && (
+          {/* {uploadedUrl && (
             <div className="mt-4">
               <p className="text-sm font-medium text-gray-500">上传的文件URL：</p>
               <a href={uploadedUrl} target="_blank" rel="noopener noreferrer" className="text-sm text-blue-500 hover:underline">
                 {uploadedUrl}
               </a>
             </div>
-          )}
+          )} */}
         </CardContent>
         {hasConfig && (
           <CardFooter>
