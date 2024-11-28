@@ -22,11 +22,6 @@
   - [ali-oss](https://github.com/ali-sdk/ali-oss) - 阿里云 OSS SDK
   - [cos-js-sdk-v5](https://github.com/tencentyun/cos-js-sdk-v5) - 腾讯云 COS SDK 目前暂未实现
 
-## 快速开始
+## Star History
 
-1. 克隆仓库：
-
-```bash
-git clone https://github.com/bofengzl/cloud-storage-upload-platform.git
-cd cloud-storage-upload-platform
-
+[![Star History Chart](https://api.star-history.com/svg?repos=bofengzl/cloud-storage-upload-platform.git&type=Date)](https://star-history.com/#bofengzl/cloud-storage-upload-platform.git&Date)
