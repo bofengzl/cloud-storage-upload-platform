@@ -15,7 +15,7 @@ interface MyDB extends DBSchema {
   };
 }
 
-// @ts-ignore
+// @ts-expect-error
 const dbPromise = openDB<MyDB>('cloud-storage-upload', 1, {
   upgrade(db) {
     const store = db.createObjectStore('upload-history', {

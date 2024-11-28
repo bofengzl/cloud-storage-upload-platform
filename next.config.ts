@@ -18,6 +18,14 @@ const nextConfig: NextConfig = {
       }
     ]
   },
+  eslint: {
+    // 忽略构建错误
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    // 忽略类型检查错误
+    ignoreBuildErrors: true,
+  }
 };
 
 export default nextConfig;

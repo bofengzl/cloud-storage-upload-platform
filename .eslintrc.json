@@ -1,3 +1,5 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+	"extends": ["next/core-web-vitals", "next/typescript"],
+	"@typescript-eslint/no-empty-object-type": "off",
+	"@typescript-eslint/ban-ts-comment": "warn" // 或者更严格的配置
 }

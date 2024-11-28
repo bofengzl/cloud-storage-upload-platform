@@ -76,7 +76,6 @@ export default function OssConfigPage() {
                 name="accessKeySecret"
                 type="password"
                 value={config.accessKeySecret}
-                placeholder=""
                 onChange={handleChange}
                 required
               />
@@ -87,7 +86,6 @@ export default function OssConfigPage() {
                 id="bucket"
                 name="bucket"
                 value={config.bucket}
-                placeholder=""
                 onChange={handleChange}
                 required
               />
