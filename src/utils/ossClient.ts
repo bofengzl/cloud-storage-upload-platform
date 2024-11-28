@@ -18,7 +18,6 @@ export function getOssClient(config: OssConfig) {
 
 export async function uploadToOSS(client: typeof OSS, file: File): Promise<string> {
   const fileArrayBuffer = Buffer.from(await file.arrayBuffer());
-  console.log('%c🤪 ~ file: /Users/zl_bofeng/Documents/github/react/cloud-storage-upload-platform/src/utils/ossClient.ts:21 [uploadToOSS/fileArrayBuffer] -> fileArrayBuffer : ', 'color: #5cfe01', fileArrayBuffer);
   const result = await client.put(file.name, fileArrayBuffer);
   return result.url;
 }

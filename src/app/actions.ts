@@ -29,14 +29,13 @@ export async function uploadFile(formData: FormData) {
   }
 
   const config = await getOssConfig()
-  console.log('%c🤪 ~ file: /Users/zl_bofeng/Documents/github/react/cloud-storage-upload-platform/src/app/actions.ts:31 [uploadFile/config] -> config : ', 'color: #db7f8a', config);
+  console.log('##OSS配置###', config);
   if (!config) {
     return { success: false, message: 'OSS 配置未设置，请先配置 OSS 信息' }
   }
 
   try {
     const ossClient = getOssClient(config)
-    console.log('%c🤪 ~ file: /Users/zl_bofeng/Documents/github/react/cloud-storage-upload-platform/src/app/actions.ts:37 [uploadFile/ossClient] -> ossClient : ', 'color: #884767', ossClient);
     const url = await uploadToOSS(ossClient, file)
     return { success: true, message: '上传成功', url }
   } catch (error) {
